@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { img } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Dentapoche - Suivi orthodontique à distance",
@@ -99,7 +100,7 @@ export default function DentapochePage() {
             {/* Image */}
             <div className="flex justify-center">
               <Image
-                src="/images/2025/11/dentapoche.webp"
+                src={img("/images/2025/11/dentapoche.webp")}
                 alt="Application Dentapoche - suivi orthodontique à distance"
                 width={400}
                 height={400}

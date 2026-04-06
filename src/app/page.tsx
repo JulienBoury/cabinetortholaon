@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { img } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Cabinet d'Orthodontie à Laon - Boury & Associés",
@@ -135,7 +136,7 @@ export default function HomePage() {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         {/* Background image */}
         <Image
-          src="/photos/cabinet/exterieur-cab.jpg"
+          src={img("/photos/cabinet/exterieur-cab.jpg")}
           alt="Cabinet d'orthodontie Boury & Associés"
           fill
           className="object-cover"
@@ -203,7 +204,7 @@ export default function HomePage() {
             </div>
             <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/photos/cabinet/photo-accueil.jpg"
+                src={img("/photos/cabinet/photo-accueil.jpg")}
                 alt="Cabinet d'orthodontie Boury et Associés à Laon"
                 fill
                 className="object-cover"
@@ -265,7 +266,7 @@ export default function HomePage() {
               >
                 <div className="relative w-full aspect-[3/4]">
                   <Image
-                    src={doctor.image}
+                    src={img(doctor.image)}
                     alt={doctor.name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -349,7 +350,7 @@ export default function HomePage() {
                 className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <Image
-                  src={src}
+                  src={img(src)}
                   alt={`Cabinet d'orthodontie Laon - photo ${i + 1}`}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -399,7 +400,7 @@ export default function HomePage() {
               >
                 <div className="relative w-full aspect-[16/10]">
                   <Image
-                    src={card.image}
+                    src={img(card.image)}
                     alt={card.title}
                     fill
                     className="object-cover"

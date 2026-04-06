@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { img } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Gouttières invisibles",
@@ -29,7 +30,7 @@ export default function GouttieresInvisiblesPage() {
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
               <Image
-                src="/images/2026/01/aligneurs-transparents-ortholaon.webp"
+                src={img("/images/2026/01/aligneurs-transparents-ortholaon.webp")}
                 alt="Gouttières invisibles (aligneurs transparents) pour traitement orthodontique"
                 width={768}
                 height={477}

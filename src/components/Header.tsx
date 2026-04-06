@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { img } from "@/lib/utils";
 
 const fichesItems = [
   { label: "Aligneurs transparents", href: "/conseils/aligneurs-transparents" },
@@ -43,7 +44,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logo.png"
+              src={img("/logo.png")}
               alt="OrthoLaon - Cabinet d'Orthodontie à Laon"
               width={180}
               height={60}

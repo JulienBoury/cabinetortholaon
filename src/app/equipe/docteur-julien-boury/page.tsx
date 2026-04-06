@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { img } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Docteur Julien Boury",
@@ -41,7 +42,7 @@ export default function DocteurJulienBouryPage() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           <div className="shrink-0">
             <Image
-              src="/photos/equipe/julien-boury.jpg"
+              src={img("/photos/equipe/julien-boury.jpg")}
               alt="Docteur Julien Boury"
               width={400}
               height={600}

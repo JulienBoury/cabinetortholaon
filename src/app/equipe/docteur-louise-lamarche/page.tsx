@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { img } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Docteur Louise Lamarche",
@@ -43,7 +44,7 @@ export default function DocteurLouiseLamarchePage() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           <div className="shrink-0">
             <Image
-              src="/photos/equipe/louise-lamarche.jpg"
+              src={img("/photos/equipe/louise-lamarche.jpg")}
               alt="Docteur Louise Lamarche"
               width={400}
               height={600}

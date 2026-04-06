@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { img } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Multi-attaches céramiques",
@@ -29,7 +30,7 @@ export default function MultiAttachesCeramiquesPage() {
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
               <Image
-                src="/images/2026/01/multi-attaches-ceramiques-ortholaon.webp"
+                src={img("/images/2026/01/multi-attaches-ceramiques-ortholaon.webp")}
                 alt="Appareil multi-attaches céramiques discret posé sur les dents"
                 width={285}
                 height={300}

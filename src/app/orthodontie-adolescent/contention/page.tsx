@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { img } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Contention orthodontique",
@@ -54,7 +55,7 @@ export default function ContentionAdolescentPage() {
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
               <Image
-                src="/images/2026/01/fil-colle-contention-ortholaon.webp"
+                src={img("/images/2026/01/fil-colle-contention-ortholaon.webp")}
                 alt="Fil de contention collé sur la face interne des dents"
                 width={285}
                 height={300}
@@ -104,7 +105,7 @@ export default function ContentionAdolescentPage() {
           <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
             <div className="md:w-1/2">
               <Image
-                src="/images/2026/01/gouttiere-contention-ortholaon.webp"
+                src={img("/images/2026/01/gouttiere-contention-ortholaon.webp")}
                 alt="Gouttière de contention transparente"
                 width={285}
                 height={300}
