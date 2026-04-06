@@ -58,10 +58,10 @@ export default async function ConseilPage({ params }: PageProps) {
 
           <div className="mt-12">
             <Link
-              href="/conseils"
+              href="/fiches-pratiques"
               className="inline-flex items-center text-primary hover:underline font-medium shadow-md hover:shadow-lg bg-white rounded-lg px-4 py-2 transition-all"
             >
-              &larr; Retour aux fiches pratiques →
+              &larr; Retour aux fiches pratiques
             </Link>
           </div>
         </div>
