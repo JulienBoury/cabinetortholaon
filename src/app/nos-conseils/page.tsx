@@ -36,9 +36,10 @@ export default function NosConseilsPage() {
   return (
     <>
       {/* ───────────── HERO ───────────── */}
-      <section className="bg-primary text-white py-20 sm:py-28">
+      <section className="bg-gradient-to-br from-accent via-dark to-accent text-white py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-3xl sm:text-5xl font-bold leading-tight mb-6">
+          <div className="section-divider mx-auto mb-6" />
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 font-[family-name:var(--font-heading)]">
             Nos conseils
           </h1>
           <p className="text-lg sm:text-xl max-w-3xl mx-auto text-white/90 leading-relaxed">
@@ -51,23 +52,23 @@ export default function NosConseilsPage() {
       </section>
 
       {/* ───────────── CARDS GRID ───────────── */}
-      <section className="py-16 sm:py-24">
+      <section className="bg-warm py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {cards.map((card) => (
               <Link
                 key={card.href}
                 href={card.href}
-                className="group bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition"
+                className="group bg-white rounded-2xl shadow-md p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-b-4 border-transparent hover:border-primary"
               >
-                <h2 className="text-xl font-bold text-dark mb-3 group-hover:text-primary transition-colors">
+                <h2 className="text-xl font-bold text-dark mb-3 group-hover:text-primary transition-colors font-[family-name:var(--font-heading)]">
                   {card.title}
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
+                <p className="text-muted text-lg leading-relaxed mb-4">
                   {card.description}
                 </p>
                 <span className="text-primary font-semibold inline-flex items-center gap-2">
-                  En savoir plus
+                  En savoir plus →
                   <svg
                     className="w-4 h-4 group-hover:translate-x-1 transition-transform"
                     fill="none"

@@ -11,9 +11,9 @@ export default function MultiAttachesCeramiquesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-gradient-to-br from-accent via-dark to-accent text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 font-[family-name:var(--font-heading)]">
             Multi-attaches céramiques
           </h1>
           <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
@@ -38,7 +38,7 @@ export default function MultiAttachesCeramiquesPage() {
               />
             </div>
             <div className="md:w-1/2 space-y-4 text-dark leading-relaxed">
-              <p>
+              <p className="text-lg">
                 Les multi-attaches céramiques fonctionnent exactement sur le
                 même principe que les brackets métalliques&nbsp;: chaque bracket
                 est collé sur la face visible de la dent et relié aux autres par
@@ -64,9 +64,10 @@ export default function MultiAttachesCeramiquesPage() {
       </section>
 
       {/* Caractéristiques clés */}
-      <section className="bg-light py-12">
+      <section className="bg-warm py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center font-[family-name:var(--font-heading)]">
             Caractéristiques clés
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -99,7 +100,7 @@ export default function MultiAttachesCeramiquesPage() {
             ].map((item) => (
               <div
                 key={item.label}
-                className="bg-white rounded-xl p-5 text-center shadow-sm"
+                className="bg-white rounded-xl p-5 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="text-3xl mb-2">{item.icon}</div>
                 <div className="text-sm font-semibold text-primary uppercase tracking-wide mb-1">
@@ -117,7 +118,8 @@ export default function MultiAttachesCeramiquesPage() {
       {/* Déroulement du traitement */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center font-[family-name:var(--font-heading)]">
             Déroulement du traitement
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -149,13 +151,13 @@ export default function MultiAttachesCeramiquesPage() {
             ].map((item) => (
               <div
                 key={item.step}
-                className="flex gap-4 bg-light rounded-xl p-6"
+                className="flex gap-4 bg-warm rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
                   {item.step}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-dark text-lg mb-2">
+                  <h3 className="font-semibold text-dark text-lg mb-2 font-[family-name:var(--font-heading)]">
                     {item.title}
                   </h3>
                   <p className="text-dark/80 text-sm leading-relaxed">
@@ -169,39 +171,45 @@ export default function MultiAttachesCeramiquesPage() {
       </section>
 
       {/* Hygiène et entretien */}
-      <section className="bg-light py-12">
+      <section className="bg-warm py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center font-[family-name:var(--font-heading)]">
             Hygiène et entretien
           </h2>
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm space-y-4 text-dark leading-relaxed">
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border-l-4 border-primary space-y-4 text-dark leading-relaxed">
             <p>
               Comme pour les brackets métalliques, une hygiène bucco-dentaire
               irréprochable est essentielle avec des multi-attaches céramiques.
               La céramique étant un matériau poreux, elle peut se colorer si
               l&apos;hygiène n&apos;est pas suffisante.
             </p>
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>
-                Brossez-vous les dents après chaque repas pendant au moins 3
-                minutes, en insistant autour des brackets.
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Brossez-vous les dents après chaque repas pendant au moins 3
+                minutes, en insistant autour des brackets.</span>
               </li>
-              <li>
-                Utilisez une brosse orthodontique et des brossettes
-                interdentaires pour nettoyer les zones difficiles d&apos;accès.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Utilisez une brosse orthodontique et des brossettes
+                interdentaires pour nettoyer les zones difficiles d&apos;accès.</span>
               </li>
-              <li>
-                Limitez la consommation de thé, café, vin rouge, curry et
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Limitez la consommation de thé, café, vin rouge, curry et
                 autres aliments colorants qui peuvent teinter les ligatures et
-                les brackets céramiques.
+                les brackets céramiques.</span>
               </li>
-              <li>
-                Évitez les aliments durs et collants qui risquent de fracturer
-                ou de décoller les brackets.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Évitez les aliments durs et collants qui risquent de fracturer
+                ou de décoller les brackets.</span>
               </li>
-              <li>
-                Un bain de bouche fluoré peut compléter le brossage, sur
-                recommandation de votre orthodontiste.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Un bain de bouche fluoré peut compléter le brossage, sur
+                recommandation de votre orthodontiste.</span>
               </li>
             </ul>
           </div>
@@ -211,31 +219,36 @@ export default function MultiAttachesCeramiquesPage() {
       {/* Que faire en cas de gêne */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center font-[family-name:var(--font-heading)]">
             Que faire en cas de gêne&nbsp;?
           </h2>
-          <div className="bg-light rounded-xl p-6 md:p-8 space-y-4 text-dark leading-relaxed">
+          <div className="bg-warm rounded-xl p-6 md:p-8 border-l-4 border-primary space-y-4 text-dark leading-relaxed">
             <p>
               Une légère sensibilité dentaire est normale pendant les 3 à 5
               jours suivant la pose et après chaque activation de
               l&apos;appareil. Elle traduit le début des mouvements dentaires.
             </p>
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>
-                Un antalgique simple (paracétamol) peut être pris pour soulager
-                l&apos;inconfort.
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Un antalgique simple (paracétamol) peut être pris pour soulager
+                l&apos;inconfort.</span>
               </li>
-              <li>
-                Si un bracket céramique se décolle ou se fracture, conservez-le
-                et contactez le cabinet pour un rendez-vous de recollement.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Si un bracket céramique se décolle ou se fracture, conservez-le
+                et contactez le cabinet pour un rendez-vous de recollement.</span>
               </li>
-              <li>
-                En cas d&apos;irritation de la joue ou de la lèvre, appliquez
-                de la cire orthodontique sur le bracket gênant.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>En cas d&apos;irritation de la joue ou de la lèvre, appliquez
+                de la cire orthodontique sur le bracket gênant.</span>
               </li>
-              <li>
-                Privilégiez une alimentation molle les premiers jours après la
-                pose ou une activation.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Privilégiez une alimentation molle les premiers jours après la
+                pose ou une activation.</span>
               </li>
             </ul>
           </div>
@@ -243,31 +256,36 @@ export default function MultiAttachesCeramiquesPage() {
       </section>
 
       {/* Résultats attendus */}
-      <section className="bg-light py-12">
+      <section className="bg-warm py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center font-[family-name:var(--font-heading)]">
             Résultats attendus
           </h2>
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm text-dark leading-relaxed space-y-4">
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border-l-4 border-primary text-dark leading-relaxed space-y-4">
             <p>
               La durée moyenne d&apos;un traitement par multi-attaches
               céramiques est de <strong>18 à 30 mois</strong>, comparable à
               celle des brackets métalliques. Les résultats comprennent&nbsp;:
             </p>
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>
-                Un alignement harmonieux des dents, obtenu de manière discrète.
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Un alignement harmonieux des dents, obtenu de manière discrète.</span>
               </li>
-              <li>
-                Une correction de l&apos;occlusion pour améliorer la fonction
-                masticatoire.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Une correction de l&apos;occlusion pour améliorer la fonction
+                masticatoire.</span>
               </li>
-              <li>
-                Une amélioration significative de l&apos;esthétique du sourire.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Une amélioration significative de l&apos;esthétique du sourire.</span>
               </li>
-              <li>
-                Une meilleure santé gingivale et parodontale grâce à des dents
-                bien alignées.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Une meilleure santé gingivale et parodontale grâce à des dents
+                bien alignées.</span>
               </li>
             </ul>
             <p>
@@ -281,7 +299,8 @@ export default function MultiAttachesCeramiquesPage() {
       {/* FAQ */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center font-[family-name:var(--font-heading)]">
             Questions fréquentes
           </h2>
           <div className="space-y-3">
@@ -325,7 +344,7 @@ export default function MultiAttachesCeramiquesPage() {
             ].map((item) => (
               <details
                 key={item.question}
-                className="group bg-light rounded-xl"
+                className="group bg-warm rounded-xl"
               >
                 <summary className="cursor-pointer p-5 font-semibold text-dark flex items-center justify-between">
                   <span>{item.question}</span>

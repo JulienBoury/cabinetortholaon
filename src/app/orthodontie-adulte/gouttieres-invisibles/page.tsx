@@ -11,9 +11,9 @@ export default function GouttieresInvisiblesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-gradient-to-br from-accent via-dark to-accent text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 font-[family-name:var(--font-heading)]">
             Gouttières invisibles
           </h1>
           <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
@@ -38,7 +38,7 @@ export default function GouttieresInvisiblesPage() {
               />
             </div>
             <div className="md:w-1/2 space-y-4 text-dark leading-relaxed">
-              <p>
+              <p className="text-lg">
                 Les gouttières invisibles, aussi appelées aligneurs
                 transparents, sont une alternative esthétique aux appareils
                 orthodontiques traditionnels. Fabriquées sur mesure à partir
@@ -64,9 +64,10 @@ export default function GouttieresInvisiblesPage() {
       </section>
 
       {/* Caractéristiques clés */}
-      <section className="bg-light py-12">
+      <section className="bg-warm py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center font-[family-name:var(--font-heading)]">
             Caractéristiques clés
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -99,7 +100,7 @@ export default function GouttieresInvisiblesPage() {
             ].map((item) => (
               <div
                 key={item.label}
-                className="bg-white rounded-xl p-5 text-center shadow-sm"
+                className="bg-white rounded-xl p-5 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="text-3xl mb-2">{item.icon}</div>
                 <div className="text-sm font-semibold text-primary uppercase tracking-wide mb-1">
@@ -117,7 +118,8 @@ export default function GouttieresInvisiblesPage() {
       {/* Déroulement du traitement */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center font-[family-name:var(--font-heading)]">
             Déroulement du traitement
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -149,13 +151,13 @@ export default function GouttieresInvisiblesPage() {
             ].map((item) => (
               <div
                 key={item.step}
-                className="flex gap-4 bg-light rounded-xl p-6"
+                className="flex gap-4 bg-warm rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
                   {item.step}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-dark text-lg mb-2">
+                  <h3 className="font-semibold text-dark text-lg mb-2 font-[family-name:var(--font-heading)]">
                     {item.title}
                   </h3>
                   <p className="text-dark/80 text-sm leading-relaxed">
@@ -169,12 +171,13 @@ export default function GouttieresInvisiblesPage() {
       </section>
 
       {/* Hygiène et entretien */}
-      <section className="bg-light py-12">
+      <section className="bg-warm py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center font-[family-name:var(--font-heading)]">
             Hygiène et entretien
           </h2>
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm space-y-4 text-dark leading-relaxed">
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border-l-4 border-primary space-y-4 text-dark leading-relaxed">
             <p>
               L&apos;un des grands avantages des gouttières invisibles est
               qu&apos;elles se retirent pour manger et pour se brosser les
@@ -182,28 +185,33 @@ export default function GouttieresInvisiblesPage() {
               un appareil fixe, mais certaines précautions restent
               indispensables.
             </p>
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>
-                Retirez toujours vos gouttières avant de manger ou de boire
-                (sauf eau plate).
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Retirez toujours vos gouttières avant de manger ou de boire
+                (sauf eau plate).</span>
               </li>
-              <li>
-                Brossez-vous les dents après chaque repas avant de remettre vos
-                gouttières en bouche.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Brossez-vous les dents après chaque repas avant de remettre vos
+                gouttières en bouche.</span>
               </li>
-              <li>
-                Nettoyez vos gouttières quotidiennement avec une brosse souple
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Nettoyez vos gouttières quotidiennement avec une brosse souple
                 et de l&apos;eau tiède. Évitez l&apos;eau chaude qui pourrait
-                les déformer.
+                les déformer.</span>
               </li>
-              <li>
-                Rangez toujours vos gouttières dans leur boîtier lorsque vous
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Rangez toujours vos gouttières dans leur boîtier lorsque vous
                 ne les portez pas pour éviter de les perdre ou de les
-                endommager.
+                endommager.</span>
               </li>
-              <li>
-                Évitez de fumer avec les gouttières en bouche, car le tabac les
-                jaunit et les opacifie.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Évitez de fumer avec les gouttières en bouche, car le tabac les
+                jaunit et les opacifie.</span>
               </li>
             </ul>
           </div>
@@ -213,33 +221,38 @@ export default function GouttieresInvisiblesPage() {
       {/* Gêne ou incident */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center font-[family-name:var(--font-heading)]">
             Gêne ou incident
           </h2>
-          <div className="bg-light rounded-xl p-6 md:p-8 space-y-4 text-dark leading-relaxed">
+          <div className="bg-warm rounded-xl p-6 md:p-8 border-l-4 border-primary space-y-4 text-dark leading-relaxed">
             <p>
               Les gouttières invisibles sont généralement très bien tolérées.
               Une légère sensation de pression est normale lors du changement de
               gouttière, signe que les dents commencent à se déplacer.
             </p>
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>
-                En cas de légère gêne, un antalgique simple (paracétamol) peut
-                être pris selon la posologie habituelle.
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>En cas de légère gêne, un antalgique simple (paracétamol) peut
+                être pris selon la posologie habituelle.</span>
               </li>
-              <li>
-                Si le bord d&apos;une gouttière irrite la gencive ou la joue,
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Si le bord d&apos;une gouttière irrite la gencive ou la joue,
                 vous pouvez le lisser délicatement avec une lime à ongles fine
-                et contacter le cabinet.
+                et contacter le cabinet.</span>
               </li>
-              <li>
-                Si vous perdez ou cassez une gouttière, contactez le cabinet
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Si vous perdez ou cassez une gouttière, contactez le cabinet
                 rapidement. En attendant, portez la gouttière précédente pour
-                éviter que les dents ne bougent.
+                éviter que les dents ne bougent.</span>
               </li>
-              <li>
-                Un léger zézaiement peut survenir les premiers jours de port.
-                Il disparaît naturellement en quelques jours.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Un léger zézaiement peut survenir les premiers jours de port.
+                Il disparaît naturellement en quelques jours.</span>
               </li>
             </ul>
           </div>
@@ -247,30 +260,37 @@ export default function GouttieresInvisiblesPage() {
       </section>
 
       {/* Résultats attendus */}
-      <section className="bg-light py-12">
+      <section className="bg-warm py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center font-[family-name:var(--font-heading)]">
             Résultats attendus
           </h2>
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm text-dark leading-relaxed space-y-4">
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border-l-4 border-primary text-dark leading-relaxed space-y-4">
             <p>
               La durée moyenne d&apos;un traitement par gouttières invisibles
               est de <strong>6 à 18 mois</strong>, selon la complexité du cas.
               Les résultats comprennent&nbsp;:
             </p>
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>Un alignement esthétique et harmonieux des dents.</li>
-              <li>
-                Une amélioration de l&apos;occlusion (engrènement entre les
-                dents du haut et du bas).
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Un alignement esthétique et harmonieux des dents.</span>
               </li>
-              <li>
-                Un sourire plus éclatant, avec un traitement quasiment
-                invisible au quotidien.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Une amélioration de l&apos;occlusion (engrènement entre les
+                dents du haut et du bas).</span>
               </li>
-              <li>
-                Un confort de traitement supérieur grâce à l&apos;absence de
-                brackets et de fils métalliques.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Un sourire plus éclatant, avec un traitement quasiment
+                invisible au quotidien.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Un confort de traitement supérieur grâce à l&apos;absence de
+                brackets et de fils métalliques.</span>
               </li>
             </ul>
             <p>
@@ -285,7 +305,8 @@ export default function GouttieresInvisiblesPage() {
       {/* FAQ */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center font-[family-name:var(--font-heading)]">
             Questions fréquentes
           </h2>
           <div className="space-y-3">
@@ -329,7 +350,7 @@ export default function GouttieresInvisiblesPage() {
             ].map((item) => (
               <details
                 key={item.question}
-                className="group bg-light rounded-xl"
+                className="group bg-warm rounded-xl"
               >
                 <summary className="cursor-pointer p-5 font-semibold text-dark flex items-center justify-between">
                   <span>{item.question}</span>

@@ -37,28 +37,33 @@ export default async function ConseilPage({ params }: PageProps) {
 
   return (
     <>
-      <section className="bg-primary text-white py-16">
+      <section className="bg-gradient-to-br from-accent via-dark to-accent text-white py-20 sm:py-28">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl font-bold">{conseil.title}</h1>
+          <div className="section-divider mb-6" />
+          <h1 className="text-4xl md:text-6xl font-bold font-[family-name:var(--font-heading)]">{conseil.title}</h1>
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="space-y-6">
-          {conseil.content.map((paragraph, index) => (
-            <p key={index} className="text-gray-700 leading-relaxed text-lg">
-              {paragraph}
-            </p>
-          ))}
-        </div>
+      <section className="bg-warm py-16 sm:py-24">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="bg-warm rounded-2xl p-8">
+            <div className="space-y-6">
+              {conseil.content.map((paragraph, index) => (
+                <p key={index} className="text-gray-700 leading-relaxed text-lg border-l-4 border-primary/20 pl-6">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
 
-        <div className="mt-12">
-          <Link
-            href="/conseils"
-            className="inline-flex items-center text-primary hover:underline font-medium"
-          >
-            &larr; Retour aux fiches pratiques
-          </Link>
+          <div className="mt-12">
+            <Link
+              href="/conseils"
+              className="inline-flex items-center text-primary hover:underline font-medium shadow-md hover:shadow-lg bg-white rounded-lg px-4 py-2 transition-all"
+            >
+              &larr; Retour aux fiches pratiques →
+            </Link>
+          </div>
         </div>
       </section>
     </>

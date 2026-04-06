@@ -49,14 +49,15 @@ export default function ParcoursPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="bg-primary text-white py-20">
+      <section className="bg-gradient-to-br from-accent via-dark to-accent text-white py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">Parcours de soin</h1>
+          <div className="section-divider mx-auto mb-6" />
+          <h1 className="text-4xl md:text-6xl font-bold font-[family-name:var(--font-heading)]">Parcours de soin</h1>
         </div>
       </section>
 
       {/* Timeline */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-warm">
         <div className="max-w-7xl mx-auto px-6">
           <div className="relative max-w-3xl mx-auto">
             {/* Vertical line */}
@@ -70,7 +71,7 @@ export default function ParcoursPage() {
                   className="relative mb-12 last:mb-0 pl-16 md:pl-0"
                 >
                   {/* Circle - mobile */}
-                  <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white text-lg font-bold shadow-lg md:hidden">
+                  <div className="absolute left-0 top-0 flex items-center justify-center rounded-full bg-primary text-white font-bold text-lg shadow-md md:hidden w-10 h-10">
                     {step.number}
                   </div>
 
@@ -83,11 +84,11 @@ export default function ParcoursPage() {
                       }
                     >
                       <div
-                        className={`rounded-xl border border-primary/15 bg-light p-6 shadow-sm ${
+                        className={`bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-primary p-6 ${
                           isEven ? "ml-auto" : "mr-auto"
                         }`}
                       >
-                        <h3 className="text-xl font-bold text-primary mb-2">
+                        <h3 className="text-xl font-bold text-primary mb-2 font-[family-name:var(--font-heading)]">
                           {step.title}
                         </h3>
                         <p className="text-dark/80 leading-relaxed">
@@ -97,7 +98,7 @@ export default function ParcoursPage() {
                     </div>
 
                     {/* Circle - desktop */}
-                    <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white text-lg font-bold shadow-lg order-2">
+                    <div className="relative z-10 flex items-center justify-center rounded-full bg-primary text-white font-bold text-lg shadow-md order-2 w-10 h-10">
                       {step.number}
                     </div>
 
@@ -106,8 +107,8 @@ export default function ParcoursPage() {
                   </div>
 
                   {/* Mobile content */}
-                  <div className="md:hidden rounded-xl border border-primary/15 bg-light p-6 shadow-sm">
-                    <h3 className="text-xl font-bold text-primary mb-2">
+                  <div className="md:hidden bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-primary p-6">
+                    <h3 className="text-xl font-bold text-primary mb-2 font-[family-name:var(--font-heading)]">
                       {step.title}
                     </h3>
                     <p className="text-dark/80 leading-relaxed">
@@ -121,7 +122,7 @@ export default function ParcoursPage() {
             {/* Final note */}
             <div className="relative pl-16 md:pl-0">
               {/* Circle - mobile */}
-              <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-full bg-primary-dark text-white md:hidden">
+              <div className="absolute left-0 top-0 flex items-center justify-center rounded-full bg-primary-dark text-white md:hidden w-10 h-10">
                 <svg
                   className="h-5 w-5"
                   fill="none"
@@ -139,7 +140,7 @@ export default function ParcoursPage() {
 
               {/* Desktop layout */}
               <div className="hidden md:flex md:flex-col md:items-center">
-                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary-dark text-white shadow-lg mb-8">
+                <div className="relative z-10 flex items-center justify-center rounded-full bg-primary-dark text-white shadow-md mb-8 w-10 h-10">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -154,8 +155,8 @@ export default function ParcoursPage() {
                     />
                   </svg>
                 </div>
-                <div className="rounded-xl border-2 border-primary/25 bg-primary/5 p-8 text-center max-w-xl">
-                  <h3 className="text-xl font-bold text-primary mb-3">
+                <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-primary p-8 text-center max-w-xl">
+                  <h3 className="text-xl font-bold text-primary mb-3 font-[family-name:var(--font-heading)]">
                     Par la suite
                   </h3>
                   <p className="text-dark/80 leading-relaxed">
@@ -168,8 +169,8 @@ export default function ParcoursPage() {
               </div>
 
               {/* Mobile content */}
-              <div className="md:hidden rounded-xl border-2 border-primary/25 bg-primary/5 p-6">
-                <h3 className="text-xl font-bold text-primary mb-2">
+              <div className="md:hidden bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-primary p-6">
+                <h3 className="text-xl font-bold text-primary mb-2 font-[family-name:var(--font-heading)]">
                   Par la suite
                 </h3>
                 <p className="text-dark/80 leading-relaxed">

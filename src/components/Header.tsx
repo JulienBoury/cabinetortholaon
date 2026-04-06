@@ -158,62 +158,92 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 max-h-[80vh] overflow-y-auto">
-          <div className="px-4 py-4 space-y-1">
-            {/* Traitements */}
-            <button
-              onClick={() => toggleDropdown("traitements")}
-              className="w-full text-left px-3 py-2 text-sm font-medium text-dark"
+      <div
+        className={`lg:hidden bg-white border-t border-gray-100 overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileOpen ? "max-h-[80vh] overflow-y-auto" : "max-h-0"
+        }`}
+      >
+        <div className="px-4 py-4 space-y-1">
+          {/* Traitements */}
+          <button
+            onClick={() => toggleDropdown("traitements")}
+            className="w-full flex items-center justify-between px-3 py-3 text-base font-medium text-dark border-b border-gray-50"
+          >
+            Traitements
+            <svg
+              className={`w-4 h-4 transition-transform duration-200 ${
+                openDropdown === "traitements" ? "rotate-180" : ""
+              }`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              Traitements
-            </button>
-            {openDropdown === "traitements" && (
-              <div className="pl-6 space-y-1">
-                <Link href="/orthodontie-enfant" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">Orthodontie enfant</Link>
-                <Link href="/orthodontie-adolescent" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">Orthodontie adolescent</Link>
-                <Link href="/orthodontie-adulte" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">Orthodontie adulte</Link>
-              </div>
-            )}
-
-            {/* Espace patient */}
-            <button
-              onClick={() => toggleDropdown("patient")}
-              className="w-full text-left px-3 py-2 text-sm font-medium text-dark"
-            >
-              Espace patient
-            </button>
-            {openDropdown === "patient" && (
-              <div className="pl-6 space-y-1">
-                <Link href="/cabinet" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">Notre philosophie</Link>
-                <Link href="/fiches-pratiques" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">Fiches pratiques</Link>
-                <Link href="/nos-conseils" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">Nos conseils</Link>
-                <Link href="/faq" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">FAQ</Link>
-              </div>
-            )}
-
-            <Link href="/parcours-de-soin" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm font-medium text-dark hover:text-primary">
-              Parcours de soin
-            </Link>
-            <Link href="/#acces" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm font-medium text-dark hover:text-primary">
-              Accès
-            </Link>
-
-            <div className="pt-4 space-y-3 border-t border-gray-100">
-              <a href="tel:0323233545" className="block text-center text-sm font-medium text-dark">
-                03 23 23 35 45
-              </a>
-              <Link
-                href="/rendez-vous"
-                onClick={() => setMobileOpen(false)}
-                className="block text-center bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold"
-              >
-                RDV en ligne
-              </Link>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div
+            className={`overflow-hidden transition-all duration-200 ${
+              openDropdown === "traitements" ? "max-h-60" : "max-h-0"
+            }`}
+          >
+            <div className="pl-6 py-1 space-y-1">
+              <Link href="/orthodontie-enfant" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">Orthodontie enfant</Link>
+              <Link href="/orthodontie-adolescent" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">Orthodontie adolescent</Link>
+              <Link href="/orthodontie-adulte" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">Orthodontie adulte</Link>
             </div>
           </div>
+
+          {/* Espace patient */}
+          <button
+            onClick={() => toggleDropdown("patient")}
+            className="w-full flex items-center justify-between px-3 py-3 text-base font-medium text-dark border-b border-gray-50"
+          >
+            Espace patient
+            <svg
+              className={`w-4 h-4 transition-transform duration-200 ${
+                openDropdown === "patient" ? "rotate-180" : ""
+              }`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div
+            className={`overflow-hidden transition-all duration-200 ${
+              openDropdown === "patient" ? "max-h-60" : "max-h-0"
+            }`}
+          >
+            <div className="pl-6 py-1 space-y-1">
+              <Link href="/cabinet" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">Notre philosophie</Link>
+              <Link href="/fiches-pratiques" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">Fiches pratiques</Link>
+              <Link href="/nos-conseils" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">Nos conseils</Link>
+              <Link href="/faq" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-dark hover:text-primary">FAQ</Link>
+            </div>
+          </div>
+
+          <Link href="/parcours-de-soin" onClick={() => setMobileOpen(false)} className="block px-3 py-3 text-base font-medium text-dark hover:text-primary border-b border-gray-50">
+            Parcours de soin
+          </Link>
+          <Link href="/#acces" onClick={() => setMobileOpen(false)} className="block px-3 py-3 text-base font-medium text-dark hover:text-primary border-b border-gray-50">
+            Accès
+          </Link>
+
+          <div className="pt-4 space-y-3">
+            <a href="tel:0323233545" className="block text-center text-base font-medium text-dark">
+              03 23 23 35 45
+            </a>
+            <Link
+              href="/rendez-vous"
+              onClick={() => setMobileOpen(false)}
+              className="block text-center bg-primary text-white px-5 py-3 rounded-full text-base font-semibold"
+            >
+              RDV en ligne
+            </Link>
+          </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }

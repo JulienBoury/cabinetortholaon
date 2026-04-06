@@ -58,9 +58,10 @@ export default function OrthodontieAdolescent() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary text-white py-20 md:py-28">
+      <section className="bg-gradient-to-br from-accent via-dark to-accent text-white py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+          <div className="section-divider mx-auto mb-6" />
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight font-[family-name:var(--font-heading)]">
             Le moment idéal pour aligner dents et sourire
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
@@ -73,13 +74,14 @@ export default function OrthodontieAdolescent() {
       {/* Solutions proposées */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8">
+          <div className="section-divider mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 font-[family-name:var(--font-heading)]">
             Solutions proposées
           </h2>
           <ul className="space-y-3">
             {solutions.map((solution) => (
               <li key={solution} className="flex items-start gap-3">
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                 <span className="text-dark/80">{solution}</span>
               </li>
             ))}
@@ -88,9 +90,10 @@ export default function OrthodontieAdolescent() {
       </section>
 
       {/* Avantages */}
-      <section className="py-16 md:py-20 bg-light">
+      <section className="py-16 md:py-20 bg-warm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8">
+          <div className="section-divider mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 font-[family-name:var(--font-heading)]">
             Avantages
           </h2>
           <ul className="space-y-3">
@@ -119,7 +122,8 @@ export default function OrthodontieAdolescent() {
       {/* Déroulement */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8">
+          <div className="section-divider mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 font-[family-name:var(--font-heading)]">
             Déroulement
           </h2>
           <ol className="space-y-4">
@@ -136,9 +140,10 @@ export default function OrthodontieAdolescent() {
       </section>
 
       {/* Link cards */}
-      <section className="py-16 md:py-20 bg-light">
+      <section className="py-16 md:py-20 bg-warm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8">
+          <div className="section-divider mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 font-[family-name:var(--font-heading)]">
             En savoir plus
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -146,9 +151,9 @@ export default function OrthodontieAdolescent() {
               <Link
                 key={card.href}
                 href={card.href}
-                className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 group border border-gray-100"
+                className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group border border-gray-100 border-b-4 border-transparent hover:border-primary"
               >
-                <h3 className="text-lg font-semibold text-dark group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-semibold text-dark group-hover:text-primary transition-colors font-[family-name:var(--font-heading)]">
                   {card.title}
                 </h3>
                 <p className="mt-2 text-sm text-dark/70 leading-relaxed">

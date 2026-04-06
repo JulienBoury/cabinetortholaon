@@ -26,25 +26,26 @@ export default function FichesPratiquesPage() {
   return (
     <>
       {/* ───────────── HERO ───────────── */}
-      <section className="bg-primary text-white py-20 sm:py-28">
+      <section className="bg-gradient-to-br from-accent via-dark to-accent text-white py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-3xl sm:text-5xl font-bold leading-tight">
+          <div className="section-divider mx-auto mb-6" />
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight font-[family-name:var(--font-heading)]">
             Fiches pratiques
           </h1>
         </div>
       </section>
 
       {/* ───────────── CARDS GRID ───────────── */}
-      <section className="py-16 sm:py-24">
+      <section className="bg-warm py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {fiches.map((fiche) => (
               <Link
                 key={fiche.slug}
                 href={`/conseils/${fiche.slug}`}
-                className="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition flex items-center justify-between"
+                className="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-between border-b-4 border-transparent hover:border-primary"
               >
-                <h2 className="text-lg font-semibold text-dark group-hover:text-primary transition-colors">
+                <h2 className="text-lg font-semibold text-dark group-hover:text-primary transition-colors font-[family-name:var(--font-heading)]">
                   {fiche.title}
                 </h2>
                 <svg

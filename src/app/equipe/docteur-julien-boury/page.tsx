@@ -24,9 +24,10 @@ export default function DocteurJulienBouryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary text-white py-20">
+      <section className="bg-gradient-to-br from-accent via-dark to-accent text-white py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="section-divider mx-auto mb-6" />
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 font-[family-name:var(--font-heading)]">
             Docteur Julien Boury
           </h1>
           <p className="text-lg md:text-xl opacity-90">
@@ -44,19 +45,20 @@ export default function DocteurJulienBouryPage() {
               alt="Docteur Julien Boury"
               width={400}
               height={600}
-              className="rounded-2xl object-cover"
+              className="rounded-2xl object-cover shadow-xl ring-4 ring-primary/20"
               priority
             />
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold text-dark mb-6">
+          <div className="bg-warm rounded-2xl p-8">
+            <div className="section-divider mb-6" />
+            <h2 className="text-3xl font-bold text-dark mb-6 font-[family-name:var(--font-heading)]">
               Qualifications
             </h2>
             <ul className="space-y-4">
               {qualifications.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1.5 h-2.5 w-2.5 rounded-full bg-primary shrink-0" />
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                   <span className="text-lg text-dark/80">{item}</span>
                 </li>
               ))}
@@ -66,9 +68,10 @@ export default function DocteurJulienBouryPage() {
       </section>
 
       {/* Traitements */}
-      <section className="py-16 bg-light">
+      <section className="py-16 bg-warm">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-dark mb-10">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-3xl font-bold text-dark mb-10 font-[family-name:var(--font-heading)]">
             Nos traitements
           </h2>
           <div className="grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto">
@@ -76,11 +79,11 @@ export default function DocteurJulienBouryPage() {
               <Link
                 key={t.href}
                 href={t.href}
-                className="rounded-2xl border border-primary/20 bg-white px-6 py-8 text-center shadow-sm hover:shadow-md transition-shadow"
+                className="rounded-2xl border border-primary/20 border-b-4 border-b-transparent hover:border-b-primary bg-white px-6 py-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
-                <span className="text-lg font-semibold text-primary">
+                <h3 className="text-lg font-semibold text-primary font-[family-name:var(--font-heading)]">
                   {t.label}
-                </span>
+                </h3>
               </Link>
             ))}
           </div>

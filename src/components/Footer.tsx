@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white">
+    <footer className="bg-accent text-white">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -16,7 +16,7 @@ export default function Footer() {
               height={53}
               className="h-10 w-auto mb-4 brightness-0 invert"
             />
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="font-[family-name:var(--font-heading)] text-white/80 text-base leading-relaxed italic">
               Sourires Confiants, Soins Experts
             </p>
             <div className="mt-6 space-y-2 text-sm text-gray-300">
@@ -118,7 +118,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-gray-600">
+      <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
           <p>SCM OrthoLaon &copy; {new Date().getFullYear()} / Tous droits réservés</p>
           <p>

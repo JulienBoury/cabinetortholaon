@@ -50,18 +50,19 @@ export default function FaqPage() {
   return (
     <>
       {/* ───────────── HERO ───────────── */}
-      <section className="bg-primary text-white py-20 sm:py-28">
+      <section className="bg-gradient-to-br from-accent via-dark to-accent text-white py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-3xl sm:text-5xl font-bold leading-tight">
+          <div className="section-divider mx-auto mb-6" />
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight font-[family-name:var(--font-heading)]">
             Orthodontie : questions fréquentes
           </h1>
         </div>
       </section>
 
       {/* ───────────── INTRO ───────────── */}
-      <section className="py-16 sm:py-24">
+      <section className="bg-warm py-16 sm:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <p className="text-gray-600 text-lg leading-relaxed mb-12">
+          <p className="text-muted text-lg leading-relaxed mb-12">
             Cette foire aux questions a pour objectif de répondre aux
             interrogations les plus courantes des patients concernant les
             traitements orthodontiques. Si vous ne trouvez pas la réponse à
@@ -73,16 +74,16 @@ export default function FaqPage() {
             {faqItems.map((item, index) => (
               <details
                 key={index}
-                className="group bg-white rounded-xl shadow-md overflow-hidden"
+                className="group bg-white rounded-2xl shadow-sm mb-4 overflow-hidden border-l-4 border-primary"
               >
-                <summary className="flex items-center justify-between cursor-pointer px-6 py-5 text-dark font-semibold text-lg hover:bg-gray-50 transition list-none">
+                <summary className="flex items-center justify-between cursor-pointer px-6 py-5 text-dark font-semibold text-lg hover:bg-warm transition list-none">
                   <span className="pr-4">{item.question}</span>
                   <span className="flex-shrink-0 text-primary transition-transform group-open:rotate-45 text-2xl leading-none">
                     +
                   </span>
                 </summary>
                 <div className="px-6 pb-6">
-                  <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                  <p className="text-muted leading-relaxed">{item.answer}</p>
                 </div>
               </details>
             ))}

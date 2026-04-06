@@ -22,21 +22,22 @@ export default function DentapochePage() {
   return (
     <>
       {/* ───────────── HERO ───────────── */}
-      <section className="bg-primary text-white py-20 sm:py-28">
+      <section className="bg-gradient-to-br from-accent via-dark to-accent text-white py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-3xl sm:text-5xl font-bold leading-tight">
+          <div className="section-divider mx-auto mb-6" />
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight font-[family-name:var(--font-heading)]">
             Votre traitement, suivi depuis chez vous
           </h1>
         </div>
       </section>
 
       {/* ───────────── CONTENT ───────────── */}
-      <section className="py-16 sm:py-24">
+      <section className="py-16 sm:py-24 bg-warm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Text content */}
             <div>
-              <p className="text-gray-600 text-lg leading-relaxed mb-10">
+              <p className="text-muted text-lg leading-relaxed mb-10">
                 Dentapoche permet d&apos;envoyer des photos, surveiller la
                 progression et ajuster les consignes entre vos rendez-vous au
                 cabinet.
@@ -44,14 +45,15 @@ export default function DentapochePage() {
 
               {/* Utile pour */}
               <div className="mb-10">
-                <h2 className="text-2xl font-bold text-dark mb-4">
+                <div className="section-divider mb-6" />
+                <h2 className="text-2xl font-bold text-dark mb-4 font-[family-name:var(--font-heading)]">
                   Utile pour
                 </h2>
                 <ul className="space-y-3">
                   {useCases.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <span className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                      <span className="text-gray-600">{item}</span>
+                      <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <span className="text-muted">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -59,14 +61,15 @@ export default function DentapochePage() {
 
               {/* Ce que cela change */}
               <div className="mb-10">
-                <h2 className="text-2xl font-bold text-dark mb-4">
+                <div className="section-divider mb-6" />
+                <h2 className="text-2xl font-bold text-dark mb-4 font-[family-name:var(--font-heading)]">
                   Ce que cela change
                 </h2>
                 <ul className="space-y-3">
                   {benefits.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <span className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                      <span className="text-gray-600">{item}</span>
+                      <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <span className="text-muted">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -78,17 +81,17 @@ export default function DentapochePage() {
                   href="https://apps.apple.com/fr/app/dentapoche/id907691498"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block rounded-full bg-dark text-white font-semibold px-8 py-3 text-center hover:bg-dark/90 transition"
+                  className="inline-block rounded-full bg-dark text-white font-semibold px-8 py-3 text-center hover:bg-dark/90 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1"
                 >
-                  App Store
+                  App Store &rarr;
                 </a>
                 <a
                   href="https://play.google.com/store/apps/details?id=fr.dentapoche"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block rounded-full bg-dark text-white font-semibold px-8 py-3 text-center hover:bg-dark/90 transition"
+                  className="inline-block rounded-full bg-dark text-white font-semibold px-8 py-3 text-center hover:bg-dark/90 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1"
                 >
-                  Google Play
+                  Google Play &rarr;
                 </a>
               </div>
             </div>
@@ -100,7 +103,7 @@ export default function DentapochePage() {
                 alt="Application Dentapoche - suivi orthodontique à distance"
                 width={400}
                 height={400}
-                className="rounded-2xl"
+                className="shadow-xl rounded-2xl"
               />
             </div>
           </div>

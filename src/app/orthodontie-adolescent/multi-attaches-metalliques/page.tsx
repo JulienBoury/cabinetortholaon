@@ -11,9 +11,10 @@ export default function MultiAttachesMetalliquesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-gradient-to-br from-accent via-dark to-accent text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="section-divider mx-auto mb-6" />
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 font-[family-name:var(--font-heading)]">
             Multi-attaches métalliques
           </h1>
           <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
@@ -38,7 +39,7 @@ export default function MultiAttachesMetalliquesPage() {
               />
             </div>
             <div className="md:w-1/2 space-y-4 text-dark leading-relaxed">
-              <p>
+              <p className="text-lg">
                 Les multi-attaches métalliques, communément appelées
                 &laquo;&nbsp;bagues&nbsp;&raquo;, constituent le traitement
                 orthodontique le plus répandu et le plus ancien. Chaque bracket
@@ -63,9 +64,10 @@ export default function MultiAttachesMetalliquesPage() {
       </section>
 
       {/* Caractéristiques clés */}
-      <section className="bg-light py-12">
+      <section className="bg-warm py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center font-[family-name:var(--font-heading)]">
             Caractéristiques clés
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -98,7 +100,7 @@ export default function MultiAttachesMetalliquesPage() {
             ].map((item) => (
               <div
                 key={item.label}
-                className="bg-white rounded-xl p-5 text-center shadow-sm"
+                className="bg-white rounded-xl p-5 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="text-3xl mb-2">{item.icon}</div>
                 <div className="text-sm font-semibold text-primary uppercase tracking-wide mb-1">
@@ -116,7 +118,8 @@ export default function MultiAttachesMetalliquesPage() {
       {/* Déroulement du traitement */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center font-[family-name:var(--font-heading)]">
             Déroulement du traitement
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -148,13 +151,13 @@ export default function MultiAttachesMetalliquesPage() {
             ].map((item) => (
               <div
                 key={item.step}
-                className="flex gap-4 bg-light rounded-xl p-6"
+                className="flex gap-4 bg-warm rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
                   {item.step}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-dark text-lg mb-2">
+                  <h3 className="font-semibold text-dark text-lg mb-2 font-[family-name:var(--font-heading)]">
                     {item.title}
                   </h3>
                   <p className="text-dark/80 text-sm leading-relaxed">
@@ -168,40 +171,46 @@ export default function MultiAttachesMetalliquesPage() {
       </section>
 
       {/* Hygiène et entretien */}
-      <section className="bg-light py-12">
+      <section className="bg-warm py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center font-[family-name:var(--font-heading)]">
             Hygiène et entretien
           </h2>
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm space-y-4 text-dark leading-relaxed">
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border-l-4 border-primary space-y-4 text-dark leading-relaxed">
             <p>
               Le port de multi-attaches métalliques nécessite une hygiène
               bucco-dentaire rigoureuse. Les brackets et les arcs retiennent
               davantage la plaque dentaire, ce qui augmente le risque de caries
               et d&apos;inflammation gingivale si le brossage est insuffisant.
             </p>
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>
-                Brossez-vous les dents après chaque repas pendant au moins 3
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Brossez-vous les dents après chaque repas pendant au moins 3
                 minutes, en insistant autour des brackets (dessus, dessous et
-                sur les côtés).
+                sur les côtés).</span>
               </li>
-              <li>
-                Utilisez une brosse orthodontique à poils en V ou une brosse
-                électrique, complétée par des brossettes interdentaires.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Utilisez une brosse orthodontique à poils en V ou une brosse
+                électrique, complétée par des brossettes interdentaires.</span>
               </li>
-              <li>
-                Un fil dentaire spécial orthodontie ou un hydropulseur peut
-                aider à nettoyer les espaces difficiles d&apos;accès.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Un fil dentaire spécial orthodontie ou un hydropulseur peut
+                aider à nettoyer les espaces difficiles d&apos;accès.</span>
               </li>
-              <li>
-                Évitez les aliments très durs (pommes entières, carottes crues
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Évitez les aliments très durs (pommes entières, carottes crues
                 non coupées, nougat) et les aliments collants (caramels,
-                chewing-gums) qui peuvent endommager l&apos;appareil.
+                chewing-gums) qui peuvent endommager l&apos;appareil.</span>
               </li>
-              <li>
-                Un bain de bouche fluoré peut être utilisé en complément, sur
-                recommandation de votre orthodontiste.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Un bain de bouche fluoré peut être utilisé en complément, sur
+                recommandation de votre orthodontiste.</span>
               </li>
             </ul>
           </div>
@@ -211,34 +220,39 @@ export default function MultiAttachesMetalliquesPage() {
       {/* Que faire en cas de gêne */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center font-[family-name:var(--font-heading)]">
             Que faire en cas de gêne&nbsp;?
           </h2>
-          <div className="bg-light rounded-xl p-6 md:p-8 space-y-4 text-dark leading-relaxed">
+          <div className="bg-warm rounded-xl p-6 md:p-8 border-l-4 border-primary space-y-4 text-dark leading-relaxed">
             <p>
               Il est normal de ressentir une légère sensibilité dentaire pendant
               les 3 à 5 jours suivant la pose de l&apos;appareil ou après
               chaque activation. Cette gêne est le signe que les dents
               commencent à se déplacer.
             </p>
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>
-                En cas de douleur, un antalgique simple (paracétamol) peut être
-                pris selon la posologie habituelle.
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>En cas de douleur, un antalgique simple (paracétamol) peut être
+                pris selon la posologie habituelle.</span>
               </li>
-              <li>
-                Si un bracket se décolle, conservez-le et prenez rendez-vous
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Si un bracket se décolle, conservez-le et prenez rendez-vous
                 rapidement pour le recoller. Ce n&apos;est pas une urgence mais
-                cela doit être corrigé pour ne pas retarder le traitement.
+                cela doit être corrigé pour ne pas retarder le traitement.</span>
               </li>
-              <li>
-                Si un arc pique ou irrite la joue, appliquez une boulette de
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Si un arc pique ou irrite la joue, appliquez une boulette de
                 cire orthodontique sur l&apos;élément gênant et contactez le
-                cabinet.
+                cabinet.</span>
               </li>
-              <li>
-                Privilégiez une alimentation molle les premiers jours
-                (compotes, soupes, pâtes) le temps de vous habituer.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Privilégiez une alimentation molle les premiers jours
+                (compotes, soupes, pâtes) le temps de vous habituer.</span>
               </li>
             </ul>
           </div>
@@ -246,29 +260,36 @@ export default function MultiAttachesMetalliquesPage() {
       </section>
 
       {/* Résultats attendus */}
-      <section className="bg-light py-12">
+      <section className="bg-warm py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center font-[family-name:var(--font-heading)]">
             Résultats attendus
           </h2>
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm text-dark leading-relaxed space-y-4">
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border-l-4 border-primary text-dark leading-relaxed space-y-4">
             <p>
               La durée moyenne d&apos;un traitement par multi-attaches
               métalliques est de <strong>18 à 30 mois</strong>, selon la
               complexité du cas. Les résultats comprennent&nbsp;:
             </p>
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>Un alignement harmonieux des dents.</li>
-              <li>
-                Une correction de l&apos;articulé dentaire (occlusion)
-                permettant une meilleure fonction masticatoire.
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Un alignement harmonieux des dents.</span>
               </li>
-              <li>
-                Une amélioration de l&apos;esthétique du sourire et du profil.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Une correction de l&apos;articulé dentaire (occlusion)
+                permettant une meilleure fonction masticatoire.</span>
               </li>
-              <li>
-                Une meilleure santé parodontale grâce à des dents plus faciles
-                à nettoyer.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Une amélioration de l&apos;esthétique du sourire et du profil.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Une meilleure santé parodontale grâce à des dents plus faciles
+                à nettoyer.</span>
               </li>
             </ul>
             <p>
@@ -282,7 +303,8 @@ export default function MultiAttachesMetalliquesPage() {
       {/* FAQ */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center font-[family-name:var(--font-heading)]">
             Questions fréquentes
           </h2>
           <div className="space-y-3">
@@ -325,7 +347,7 @@ export default function MultiAttachesMetalliquesPage() {
             ].map((item) => (
               <details
                 key={item.question}
-                className="group bg-light rounded-xl"
+                className="group bg-warm rounded-xl"
               >
                 <summary className="cursor-pointer p-5 font-semibold text-dark flex items-center justify-between">
                   <span>{item.question}</span>

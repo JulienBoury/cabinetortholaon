@@ -11,9 +11,9 @@ export default function ContentionEnfantPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-gradient-to-br from-accent via-dark to-accent text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 font-[family-name:var(--font-heading)]">
             Contention orthodontique
           </h1>
           <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
@@ -26,7 +26,7 @@ export default function ContentionEnfantPage() {
       {/* Introduction */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4 space-y-4 text-dark leading-relaxed">
-          <p>
+          <p className="text-lg">
             La contention est la phase qui suit immédiatement la fin du
             traitement orthodontique actif. Elle a pour objectif de maintenir
             les dents dans leur nouvelle position, le temps que l&apos;os et les
@@ -44,9 +44,10 @@ export default function ContentionEnfantPage() {
       </section>
 
       {/* Contention fixe */}
-      <section className="bg-light py-12">
+      <section className="bg-warm py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center font-[family-name:var(--font-heading)]">
             Contention fixe
           </h2>
           <div className="flex flex-col md:flex-row gap-8 items-center">
@@ -67,16 +68,24 @@ export default function ContentionEnfantPage() {
                 l&apos;extérieur et ne gêne ni la parole ni l&apos;alimentation
                 après une courte période d&apos;adaptation.
               </p>
-              <ul className="list-disc list-inside space-y-2 text-dark/80">
-                <li>Invisible depuis l&apos;extérieur.</li>
-                <li>Agit 24 heures sur 24 sans intervention de votre part.</li>
-                <li>
-                  Généralement porté plusieurs années, voire à vie, selon les
-                  recommandations de votre orthodontiste.
+              <ul className="space-y-3 text-dark/80">
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Invisible depuis l&apos;extérieur.</span>
                 </li>
-                <li>
-                  Nécessite un brossage minutieux autour du fil pour éviter
-                  l&apos;accumulation de tartre.
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Agit 24 heures sur 24 sans intervention de votre part.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Généralement porté plusieurs années, voire à vie, selon les
+                  recommandations de votre orthodontiste.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Nécessite un brossage minutieux autour du fil pour éviter
+                  l&apos;accumulation de tartre.</span>
                 </li>
               </ul>
             </div>
@@ -87,7 +96,8 @@ export default function ContentionEnfantPage() {
       {/* Contention amovible */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center font-[family-name:var(--font-heading)]">
             Contention amovible
           </h2>
           <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
@@ -107,22 +117,26 @@ export default function ContentionEnfantPage() {
                 d&apos;une empreinte de vos dents en fin de traitement. Elle se
                 porte généralement la nuit.
               </p>
-              <ul className="list-disc list-inside space-y-2 text-dark/80">
-                <li>
-                  Transparente et discrète, à porter principalement pendant le
-                  sommeil.
+              <ul className="space-y-3 text-dark/80">
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Transparente et discrète, à porter principalement pendant le
+                  sommeil.</span>
                 </li>
-                <li>
-                  Maintient l&apos;ensemble de l&apos;arcade dentaire dans sa
-                  position corrigée.
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Maintient l&apos;ensemble de l&apos;arcade dentaire dans sa
+                  position corrigée.</span>
                 </li>
-                <li>
-                  Facile à retirer pour l&apos;hygiène et les repas.
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Facile à retirer pour l&apos;hygiène et les repas.</span>
                 </li>
-                <li>
-                  Durée de port recommandée&nbsp;: tous les soirs pendant au
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span>Durée de port recommandée&nbsp;: tous les soirs pendant au
                   moins 2 ans, puis de manière dégressive selon l&apos;avis de
-                  votre orthodontiste.
+                  votre orthodontiste.</span>
                 </li>
               </ul>
             </div>
@@ -131,49 +145,57 @@ export default function ContentionEnfantPage() {
       </section>
 
       {/* Recommandations d'entretien */}
-      <section className="bg-light py-12">
+      <section className="bg-warm py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center font-[family-name:var(--font-heading)]">
             Recommandations d&apos;entretien
           </h2>
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm space-y-4 text-dark leading-relaxed">
-            <h3 className="font-semibold text-lg text-dark">
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border-l-4 border-primary space-y-4 text-dark leading-relaxed">
+            <h3 className="font-semibold text-lg text-dark font-[family-name:var(--font-heading)]">
               Pour le fil de contention collé
             </h3>
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>
-                Brossez soigneusement la face interne des dents matin et soir,
-                en passant la brosse le long du fil.
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Brossez soigneusement la face interne des dents matin et soir,
+                en passant la brosse le long du fil.</span>
               </li>
-              <li>
-                Utilisez du fil dentaire spécial (type Superfloss) ou un
-                hydropulseur pour nettoyer sous le fil et entre les dents.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Utilisez du fil dentaire spécial (type Superfloss) ou un
+                hydropulseur pour nettoyer sous le fil et entre les dents.</span>
               </li>
-              <li>
-                Faites réaliser un détartrage régulier chez votre
-                chirurgien-dentiste, au moins une fois par an.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Faites réaliser un détartrage régulier chez votre
+                chirurgien-dentiste, au moins une fois par an.</span>
               </li>
             </ul>
 
-            <h3 className="font-semibold text-lg text-dark mt-6">
+            <h3 className="font-semibold text-lg text-dark mt-6 font-[family-name:var(--font-heading)]">
               Pour la gouttière de contention
             </h3>
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>
-                Rincez et brossez votre gouttière chaque matin avec une brosse
-                souple et de l&apos;eau tiède (pas d&apos;eau chaude).
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Rincez et brossez votre gouttière chaque matin avec une brosse
+                souple et de l&apos;eau tiède (pas d&apos;eau chaude).</span>
               </li>
-              <li>
-                Rangez-la toujours dans son boîtier lorsque vous ne la portez
-                pas.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Rangez-la toujours dans son boîtier lorsque vous ne la portez
+                pas.</span>
               </li>
-              <li>
-                N&apos;utilisez pas de dentifrice pour la nettoyer&nbsp;: les
-                micro-abrasifs pourraient la rayer et la rendre opaque.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>N&apos;utilisez pas de dentifrice pour la nettoyer&nbsp;: les
+                micro-abrasifs pourraient la rayer et la rendre opaque.</span>
               </li>
-              <li>
-                Remplacez la gouttière si elle se fissure, se déforme ou ne
-                s&apos;adapte plus correctement.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Remplacez la gouttière si elle se fissure, se déforme ou ne
+                s&apos;adapte plus correctement.</span>
               </li>
             </ul>
           </div>
@@ -183,32 +205,37 @@ export default function ContentionEnfantPage() {
       {/* En cas d'incident */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center font-[family-name:var(--font-heading)]">
             En cas d&apos;incident
           </h2>
-          <div className="bg-light rounded-xl p-6 md:p-8 space-y-4 text-dark leading-relaxed">
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>
-                <strong>Le fil de contention se décolle partiellement&nbsp;:</strong>{" "}
+          <div className="bg-warm rounded-xl p-6 md:p-8 border-l-4 border-primary space-y-4 text-dark leading-relaxed">
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span><strong>Le fil de contention se décolle partiellement&nbsp;:</strong>{" "}
                 contactez le cabinet rapidement pour le recoller. En attendant,
                 ne tirez pas sur le fil. Si une extrémité pique, appliquez de
-                la cire orthodontique.
+                la cire orthodontique.</span>
               </li>
-              <li>
-                <strong>Le fil se casse&nbsp;:</strong> prenez rendez-vous dès
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span><strong>Le fil se casse&nbsp;:</strong> prenez rendez-vous dès
                 que possible. Portez votre gouttière de contention en attendant
-                (si vous en avez une) pour éviter tout déplacement dentaire.
+                (si vous en avez une) pour éviter tout déplacement dentaire.</span>
               </li>
-              <li>
-                <strong>La gouttière se fissure ou se casse&nbsp;:</strong>{" "}
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span><strong>La gouttière se fissure ou se casse&nbsp;:</strong>{" "}
                 contactez le cabinet pour en faire fabriquer une nouvelle. Ne
                 portez pas une gouttière endommagée qui pourrait blesser vos
-                gencives.
+                gencives.</span>
               </li>
-              <li>
-                <strong>Vous constatez un léger mouvement dentaire&nbsp;:</strong>{" "}
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span><strong>Vous constatez un léger mouvement dentaire&nbsp;:</strong>{" "}
                 consultez rapidement. Plus un déplacement est pris en charge
-                tôt, plus il est facile à corriger.
+                tôt, plus il est facile à corriger.</span>
               </li>
             </ul>
           </div>
@@ -216,31 +243,36 @@ export default function ContentionEnfantPage() {
       </section>
 
       {/* Résultats attendus */}
-      <section className="bg-light py-12">
+      <section className="bg-warm py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-6 text-center font-[family-name:var(--font-heading)]">
             Résultats attendus
           </h2>
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm text-dark leading-relaxed space-y-4">
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border-l-4 border-primary text-dark leading-relaxed space-y-4">
             <p>
               La contention n&apos;est pas un traitement actif&nbsp;: elle ne
               déplace pas les dents, mais elle empêche toute récidive. Son rôle
               est de pérenniser les résultats obtenus pendant la phase active du
               traitement.
             </p>
-            <ul className="list-disc list-inside space-y-2 text-dark/80">
-              <li>
-                Stabilisation de l&apos;alignement dentaire dans la durée.
+            <ul className="space-y-3 text-dark/80">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Stabilisation de l&apos;alignement dentaire dans la durée.</span>
               </li>
-              <li>
-                Préservation de l&apos;occlusion corrigée.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Préservation de l&apos;occlusion corrigée.</span>
               </li>
-              <li>
-                Maintien de l&apos;esthétique du sourire au fil des années.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Maintien de l&apos;esthétique du sourire au fil des années.</span>
               </li>
-              <li>
-                Prévention de la récidive, phénomène naturel observé chez tous
-                les patients.
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <span>Prévention de la récidive, phénomène naturel observé chez tous
+                les patients.</span>
               </li>
             </ul>
             <p>
@@ -257,7 +289,8 @@ export default function ContentionEnfantPage() {
       {/* FAQ */}
       <section className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center">
+          <div className="section-divider mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-dark mb-8 text-center font-[family-name:var(--font-heading)]">
             Questions fréquentes
           </h2>
           <div className="space-y-3">
@@ -301,7 +334,7 @@ export default function ContentionEnfantPage() {
             ].map((item) => (
               <details
                 key={item.question}
-                className="group bg-light rounded-xl"
+                className="group bg-warm rounded-xl"
               >
                 <summary className="cursor-pointer p-5 font-semibold text-dark flex items-center justify-between">
                   <span>{item.question}</span>

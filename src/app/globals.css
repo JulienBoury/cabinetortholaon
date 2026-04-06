@@ -3,10 +3,15 @@
 @theme inline {
   --color-primary: #14ACE8;
   --color-primary-dark: #0e8dbf;
-  --color-dark: #485264;
-  --color-light: #F0F2F5;
+  --color-primary-light: #e8f6fd;
+  --color-accent: #2c3e6b;
+  --color-warm: #f8f4ef;
+  --color-dark: #1e2a3a;
+  --color-muted: #64748b;
+  --color-light: #f7f8fa;
   --color-white: #ffffff;
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Playfair Display", Georgia, serif;
 }
 
 body {
@@ -16,4 +21,12 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Subtle section divider */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary);
+  border-radius: 2px;
 }
