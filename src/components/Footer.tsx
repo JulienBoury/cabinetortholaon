@@ -120,14 +120,8 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
-          <p>SCM OrthoLaon &copy; {new Date().getFullYear()} / Tous droits réservés</p>
-          <p>
-            Conception et réalisation :{" "}
-            <a href="https://mediweb.fr" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-              Mediweb
-            </a>
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-center text-xs text-gray-400">
+          <p>&copy; {new Date().getFullYear()} OrthoLaon — Tous droits réservés</p>
         </div>
       </div>
     </footer>
